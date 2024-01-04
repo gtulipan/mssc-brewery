@@ -24,4 +24,17 @@ public class BeerServiceImpl implements BeerService {
                 .beerStyle("Lager")
                 .build();
     }
+
+    /**
+     * @param beerDto BeerDto entity
+     * @return Saved BeerDto entity
+     */
+    @Override
+    public BeerDto saveNewBeer(BeerDto beerDto) {
+        return BeerDto.builder()
+                .id(UUID.randomUUID())
+                .beerStyle(beerDto.getBeerStyle())
+                .beerName(beerDto.getBeerName())
+                .build();
+    }
 }
