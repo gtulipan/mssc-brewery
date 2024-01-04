@@ -14,7 +14,7 @@ public class BeerServiceImpl implements BeerService {
 
     /**
      * @param beerId Beer identifier
-     * @return A BeerDto based on beer id
+     * @return A {@link BeerDto} based on beer id
      */
     @Override
     public BeerDto getBeerById(UUID beerId) {
